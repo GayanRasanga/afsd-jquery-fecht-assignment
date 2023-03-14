@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> 
+</head>
+<body onload="getalluser()">
+     <div class="nav-button">
+         <button onclick="loadpage1()">Add User</button>
+         <button onclick="loadpage2()">View User</button>
+     </div>
+
+<!-- ---------------------------------User Registory form-------------------------------------------->
+    <div id="form-data" class="container">
+        <div class="text">User Registory</div>
+        <form class="form">
+ <!-- --------------------First Row------------------------------------------------------------------->
+            <div class="form-row">
+                <div class="input-data">
+                    <input name="username" type="text" required>
+                    <div class="underline"></div>
+                    <label>User Name</label>
+                </div>
+                <div class="input-data">
+                    <input name="name" type="text" required>
+                    <div class="underline"></div>
+                    <label>Full Name</label>
+                </div>
+            </div>
+<!-- -------------------------Second Row----------------------------------------------------------------->
+            <div class="form-row">
+                    <div class="input-data">
+                        <input name="password" type="text" required>
+                        <div class="underline"></div>
+                        <label>User Password</label>
+                    </div>
+                    <div class="input-data">
+                        <input name="email" type="text" required>
+                        <div class="underline"></div>
+                        <label>User Email</label>
+                    </div>
+            </div> 
+<!-- -------------------------Submit Butten--------------------------------------------------------------->
+                    <div class="form-row submit-btn">
+                        <div class="input-data">
+                            <div class="inner"></div>
+                            <input type="submit" value="Add User" onclick="savedata()">
+                        </div>
+                    </div>
+        </form>
+    </div>
+<!-- -------------------------From End----------------------------------------------------------------------->
+
+<!-- -------------------------------------Table Head---------------------------------------------------------------- -->
+<div id="datatable" class="tabledata">
+    <div id="heder"><h1>User Dietais</h1></div>
+    <table id="usertable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>User Full Name</th>
+                <th>User Password</th> 
+                <th>User Email</th>     
+        </thead>
+           <tbody id="tbody">
+           </body> 
+    </table>
+    </div>
+
+    <!-- -------------------------------------Table Head---------------------------------------------------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
